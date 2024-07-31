@@ -1,9 +1,40 @@
-"""
-TUI is short for Text-User Interface. This module is responsible for communicating with the user.
-The functions in this module will display information to the user and/or retrieve a response from the user.
-Each function in this module should utilise any parameters and perform user input/output.
-A function may also need to format and/or structure a response e.g. return a list, tuple, etc.
-Any errors or invalid inputs should be handled appropriately.
-Please note that you do not need to read the data file or perform any other such processing in this module.
-"""
+def menu():
+    print("""Please enter the letter which corresponds with your desired menu choice:\n
+    [A] View Data
+    [B] Visualise Data
+    [C] Export Data   
+    [X] Exit
+     """)
+    selection = input("Enter your choice:\n")
+    return selection.upper()
 
+
+def submenu_a():
+    print(""""Please enter one of the following options:\n
+    [A] View Reviews by Park
+    [B] Number of Reviews by Park and Reviewer Location
+    [C] Average Score per year by Park
+    [D] Average Score per Park by Reviewer Location
+   """)
+    choice = input("Enter your choice:\n")
+    return choice.upper()
+
+
+def submenu_b():
+    print(""""Please enter one of the following options:\n
+    [A] Most Reviewed Parks
+    [B] Average Scores
+    [C] Park Ranking by Nationality
+    [D] Most Popular Month by Park
+     """)
+    choice = input("Enter your choice:\n")
+    return choice.upper()
+
+def export_menu():
+    print("Export Menu")
+    print("A. Export to TXT")
+    print("B. Export to CSV")
+    print("C. Export to JSON")
+    print("D. Return to main menu")
+    choice = input("Enter your choice:\n ")
+    return choice.upper()
